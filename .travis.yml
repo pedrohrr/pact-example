@@ -7,7 +7,5 @@ before_install:
   - chmod +x consumer/gradle/wrapper/gradle-wrapper.jar
   - chmod +x provider-spring/gradle/wrapper/gradle-wrapper.jar
 script:
-  - cd consumer
-  - ./gradlew clean build
-  - cd ../provider-spring
-  - ./gradlew clean build
+  - ./gradlew clean build -b consumer/build.gradle.kts
+  - ./gradlew clean build -b provider-spring/build.gradle.kts

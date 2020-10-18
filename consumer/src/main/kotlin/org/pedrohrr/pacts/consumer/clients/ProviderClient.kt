@@ -10,7 +10,7 @@ class ProviderClient(private val messagesUrl: String) {
     fun getResponse(parameter: String): Response {
         val response = khttp.get(
                 url = messagesUrl,
-                params = mapOf("parameter" to parameter),
+                params = mapOf("parameter" to parameter)
         ).text
 
         return objectMapper.readValue(response, Response::class.java)
