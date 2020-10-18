@@ -2,8 +2,12 @@ language: java
 jdk:
   - oraclejdk11
 before_install:
-  - chmod +x gradlew
-  - chmod +x gradle/wrapper/gradle-wrapper.jar
+  - chmod +x consumer/gradlew
+  - chmod +x provider-spring/gradlew
+  - chmod +x consumer/gradle/wrapper/gradle-wrapper.jar
+  - chmod +x provider-spring/gradle/wrapper/gradle-wrapper.jar
 script:
-  - ./gradlew clean build -b consumer/build.gradle.kts
-  - ./gradlew clean build -b provider-spring/build.gradle.kts
+  - cd consumer
+  - ./gradlew test
+  - cd ../provider-spring
+  - ./gradlew test
