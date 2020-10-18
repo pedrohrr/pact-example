@@ -3,9 +3,9 @@ jdk:
   - oraclejdk11
 before_install:
   - chmod +x consumer/gradlew
-  - chmod +x provider/gradlew
+  - chmod +x provider-spring/gradlew
   - chmod +x consumer/gradle/wrapper/gradle-wrapper.jar
-  - chmod +x provider/gradle/wrapper/gradle-wrapper.jar
+  - chmod +x provider-spring/gradle/wrapper/gradle-wrapper.jar
 script:
   - cd consumer
   - ./gradlew clean build

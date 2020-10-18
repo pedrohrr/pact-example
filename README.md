@@ -1,5 +1,7 @@
 ## Simple example of Pact
 
+[![Build Status](https://travis-ci.org/pedrohrr/pact-example.svg?branch=main)](https://travis-ci.org/pedrohrr/pact-example)
+
 An extremely simple example of how to implement pact validation between two microservices.
 Even though it is simple, it covers the complete flow of a pact, with working examples of both consumer and provider.
 
