@@ -124,7 +124,7 @@ cd consumer
 After the test is successful, a pact file will be generated on `../pacts` folder, following the pattern `<consumer-name>-<provider-name>.json`.
 All the interactions detailed on consumer will be described in this file.
 
-### Validating the pact file
+### Validating the pact file in a SpringBootTest
 
 Now with a generated pact file, you have to verify if the provider can fulfill the requirements.
 
@@ -207,3 +207,11 @@ A better understanding is achieved by modifying both sides and running the test 
 
 For that you will need to implement a [pact-broker](https://github.com/pact-foundation/pact_broker). 
 Pact-broker will allow you to share the pacts and verification results if needed.
+
+## Ongoing Quarkus provider verification
+
+An attempt to validate pacts using QuarkusTest is placed on [provider-quarkus](provider-quarkus) folder.
+Unfortunately, QuarkusTest-Extension is not working properly with pact-jvm-provider library.
+For more information please visit: 
+- https://github.com/quarkusio/quarkus/issues/9677
+- https://github.com/quarkusio/quarkus/issues/10152
